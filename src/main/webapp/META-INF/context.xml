@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Context>
+
+    <Resource
+        name="jdbc/h2/test"
+        
+        auth="Container"
+        type="javax.sql.DataSource"
+        
+        driverClassName="org.h2.Driver"
+        url="jdbc:h2:tcp://0.0.0.0/C:/app/h2/data/test"
+        username="sa"
+        password=""
+        
+        maxTotal="10"
+        maxIdle="3"
+        maxWaitMillis="-1"/>
+        
+        
+    <Resource
+        name="jdbc/log4jdbc/h2/test"
+        
+        auth="Container"
+        type="javax.sql.DataSource"
+        
+        driverClassName="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"
+        url="jdbc:log4jdbc:h2:tcp://0.0.0.0/C:/app/h2/data/test"
+        username="sa"
+        password=""
+        
+        maxTotal="10"
+        maxIdle="3"
+        maxWaitMillis="-1"/>
+        
+
+    <Resource
+        name="jdbc/oracle/xepdb1"
+        
+        auth="Container"
+        type="javax.sql.DataSource"
+        
+        driverClassName="oracle.jdbc.OracleDriver"
+        url="jdbc:oracle:thin:@k211-33:1521/xepdb1"
+        username="hr"
+        password="oracle"
+        
+        maxTotal="20"
+        maxIdle="7"
+        maxWaitMillis="-1"/>  
+
+    <Resource
+        name="jdbc/log4jdbc/oracle/xepdb1"
+        
+        auth="Container"
+        type="javax.sql.DataSource"
+        
+        driverClassName="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"
+        url="jdbc:log4jdbc:oracle:thin:@k211-33:1521/xepdb1"
+        username="hr"
+        password="oracle"
+        
+        maxTotal="20"
+        maxIdle="7"
+        maxWaitMillis="-1"/>
+        
+        
+</Context>
